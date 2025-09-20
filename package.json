@@ -10,7 +10,8 @@
     "build": "cd client && npm run build",
     "start": "cd server && npm start",
     "install-all": "npm install && cd server && npm install && cd ../client && npm install",
-    "build-production": "npm run build && npm run start"
+    "build-production": "npm run build && npm run start",
+    "vercel-build": "cd client && npm run build"
   },
   "keywords": ["facebook", "messenger", "bot", "dashboard", "arabic"],
   "author": "Your Name",
@@ -19,7 +20,7 @@
     "concurrently": "^8.2.2"
   },
   "engines": {
-    "node": ">=16.0.0",
+    "node": ">=18.0.0",
     "npm": ">=8.0.0"
   }
 }

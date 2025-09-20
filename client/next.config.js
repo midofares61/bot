@@ -11,6 +11,19 @@ const nextConfig = {
   images: {
     domains: ['graph.facebook.com', 'platform-lookaside.fbsbx.com'],
   },
+  // Vercel optimization
+  experimental: {
+    outputStandalone: true,
+  },
+  // Handle API routes
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: '/api/:path*',
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
